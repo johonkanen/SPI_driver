@@ -188,7 +188,7 @@ package body clock_divider_pkg is
     return boolean is
     begin
         
-        return self.clock_counter = 0 and data_delivered_on_rising_edge(self);
+        return self.clock_counter = 0 and self.clock_divider_counter = 1;
     end clock_divider_is_ready;
 ------------------------------------------------------------------------
 end package body clock_divider_pkg;
